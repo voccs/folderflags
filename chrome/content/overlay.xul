@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://folderflags/locale/overlay.dtd">
+
+<overlay id="folderflags-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript"
+          src="chrome://folderflags/content/overlay.js" />
+
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="bundle_folderflags"
+                  src="chrome://folderflags/locale/folderflags.properties" />
+  </stringbundleset>
+
+  <popup id="folderPaneContext">
+    <menuitem id="folderFlags-folderPaneContext-flags"
+              label="&folderFlagsFolderPaneContextFlags.label;"
+              accesskey="&folderFlagsFolderPaneContextFlags.accesskey;"
+              oncommand="FolderFlagsOverlay.MsgFolderFlags();"
+              insertafter="folderPaneContext-properties"/>
+  </popup>
+
+  <menu id="menu_Edit">
+    <menupopup id="menu_Edit-folderflags-popup"
+               onpopupshowing="FolderFlagsOverlay.editPopupShowing()">
+      <menuitem id="folderFlags-menu_Edit-flags"
+                label="&folderFlagsMenuEditFlags.label;"
+                oncommand="FolderFlagsOverlay.MsgFolderFlags();"
+                insertafter="menu_properties"/>
+    </menupopup>
+  </menu>
+
+</overlay>

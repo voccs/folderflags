@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>{2bc419d0-6cf3-11da-8494-000a95be0946}</em:id>
+    <em:name>FolderFlags</em:name>
+    <em:version>0.1</em:version>
+    
+    <!-- Thunderbird -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+        <em:minVersion>1.5</em:minVersion>
+        <em:maxVersion>1.5.1</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+    
+    <!-- The contents of the extension //-->
+    <em:file>
+      <Description about="urn:mozilla:extension:file:folderflags.jar">
+        <em:package>content/folderflags/</em:package>
+	<em:locale>locale/en-US/folderflags/</em:locale>
+        <em:skin>skin/classic/folderflags/</em:skin>
+      </Description>
+    </em:file>
+
+    <!-- Front End Integration Hooks (used by Extension Manager)-->
+    <em:description>Allows users to edit the flags Thunderbird sets on folders.</em:description>
+    <em:creator>Ryan Lee (ryan@ryanlee.org)</em:creator>
+    <em:iconURL>chrome://folderflags/skin/icon32x32.png</em:iconURL>
+    <em:homepageURL>http://ryanlee.org/software/mozilla/thunderbird/folderflags/</em:homepageURL>
+    <em:updateURL>http://ryanlee.org/software/mozilla/thunderbird/folderflags/update.rdf</em:updateURL>
+    <em:type parseType="Integer">2</em:type> <!-- type=extension -->
+  </Description>
+</RDF>
