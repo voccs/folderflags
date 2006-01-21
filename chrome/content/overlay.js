@@ -27,8 +27,8 @@ var FolderFlagsOverlay = {
 
     initOverlay : function() {
         // this part evaluates whether to show the folder pane context menu
-        var menu = document.getElementById("folderPaneContext");
-        menu.addEventListener("popupshowing", function() { FolderFlagsOverlay.contextPopupShowing(); }, false);
+        //var menu = document.getElementById("folderPaneContext");
+        //menu.addEventListener("popupshowing", function() { FolderFlagsOverlay.contextPopupShowing(); }, false);
     },
 
     contextPopupShowing : function() {
