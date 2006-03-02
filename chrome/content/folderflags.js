@@ -94,4 +94,8 @@ FolderFlags.save = function() {
     }
 
     window.close();
+
+    //var windowManager = Components.classes['@mozilla.org/appshell/window-mediator;1'].getService(Components.interfaces.nsIWindowMediator);
+    //var desiredWindow = windowManager.getMostRecentWindow("mail:3pane");
+    //desiredWindow.refresh();
 }
