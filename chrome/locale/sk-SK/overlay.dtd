@@ -1,0 +1,7 @@
+<!ENTITY folderFlags.label "Vlajky">
+<!ENTITY folderFlagsDescription.label "Vlajky pridružené k tomuto priečinku">
+
+<!ENTITY folderFlagsFolderPaneContextFlags.label "Vlajky...">
+<!ENTITY folderFlagsFolderPaneContextFlags.accesskey "V">
+
+<!ENTITY folderFlagsMenuEditFlags.label "Vlajky priečinka...">
