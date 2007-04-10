@@ -1,7 +1,7 @@
 const APP_DISPLAY_NAME = "Folder Flags";
 const APP_NAME = "folderflags";
 const APP_PACKAGE = "folderflags";
-const APP_VERSION = "0.3";
+const APP_VERSION = "0.4";
 
 const APP_JAR_FILE = APP_NAME+".jar";
 initInstall(APP_NAME, APP_PACKAGE, APP_VERSION);
