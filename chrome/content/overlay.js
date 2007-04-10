@@ -2,7 +2,7 @@
  * Script for use in main app window overlay.
  *
  * Part of FolderFlags by Ryan Lee <ryan@ryanlee.org>
- * Copyright (c) 2005-2006 by Ryan Lee.
+ * Copyright (c) 2005-2007 by Ryan Lee.
  * See the license.txt included in this package for licensing information.
  */
 
