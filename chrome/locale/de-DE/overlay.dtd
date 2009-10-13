@@ -1,0 +1,7 @@
+<!ENTITY folderFlags.label "Flags">
+<!ENTITY folderFlagsDescription.label "Icons, um deine Ordner zu verschönern">
+
+<!ENTITY folderFlagsFolderPaneContextFlags.label "Icons...">
+<!ENTITY folderFlagsFolderPaneContextFlags.accesskey "F">
+
+<!ENTITY folderFlagsMenuEditFlags.label "OrdnerIcons...">
