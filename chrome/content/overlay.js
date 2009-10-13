@@ -6,14 +6,21 @@
  * See the license.txt included in this package for licensing information.
  */
 
+/* from widgetglue.js */
+function FolderProperties(name, oldName, uri) {
+    if (name != oldName)
+        RenameFolder(name, uri);
+}
+
 var FolderFlagsOverlay = {
     MsgFolderFlags : function() {
         var flagsBundle = document.getElementById("bundle_folderflags");
-        var preselectedURI = GetSelectedFolderURI();
-        var msgFolder = GetMsgFolderFromUri(preselectedURI, true);
+        var folders = GetSelectedMsgFolders();
+        var msgFolder = folders.length == 1 ? folders[0] : null;
+        if (!msgFolder) return;
+        var preselectedURI = msgFolder.URI;
         var serverType = msgFolder.server.type;
-        var folderTree = GetFolderTree();
-        var name = GetFolderNameFromUri(preselectedURI, folderTree);
+        var name = msgFolder.prettyName;
         var windowTitle = flagsBundle.getString("folderFlagsFolderContextPane");
         var dialog = window.openDialog(
               "chrome://folderflags/content/folderflags.xul",

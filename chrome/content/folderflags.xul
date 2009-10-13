@@ -44,7 +44,7 @@
     <tabpanels id="folderflags-tabPanel">
       <vbox align="start">
         <hbox align="center" valign="middle">
-          &folder; <label id="folderName" />
+          <label>&folder;</label><label id="folderName" />
         </hbox>
 
         <vbox id="folderflags-flaglist">

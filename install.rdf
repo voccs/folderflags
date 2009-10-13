@@ -6,14 +6,14 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>{2bc419d0-6cf3-11da-8494-000a95be0946}</em:id>
     <em:name>FolderFlags</em:name>
-    <em:version>1.0</em:version>
+    <em:version>1.1</em:version>
     
     <!-- Thunderbird -->
     <em:targetApplication>
       <Description>
         <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
         <em:minVersion>1.5</em:minVersion>
-        <em:maxVersion>2.0.0.*</em:maxVersion>
+        <em:maxVersion>3.1a1pre</em:maxVersion>
       </Description>
     </em:targetApplication>
     
@@ -21,10 +21,14 @@
     <em:file>
       <Description about="urn:mozilla:extension:file:folderflags.jar">
         <em:package>content/folderflags/</em:package>
-	<em:locale>locale/en-US/folderflags/</em:locale>
+        <em:locale>locale/en-US/folderflags/</em:locale>
         <em:skin>skin/classic/folderflags/</em:skin>
       </Description>
     </em:file>
+
+    <!-- Is em:updateKey compatible with distributing through a.m.o?
+    <em:updateKey>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDJPpUYKZWucZcgI7PwQo15iV/gGdyUdufUdHjguGukN/1FJ2cFuQa+yOrYh9sDeCrvlvhQd996UzUp7zFO3Y5NiDUAa0S+C584yXPF/xZ9MVNcD2vv1gX4seErfVKhgIGceyWtm5TC/VHXF4yCSQha8B/MrEmBiwXe6ZjSGTxnWwIDAQAB</em:updateKey>
+    -->
 
     <!-- Front End Integration Hooks (used by Extension Manager)-->
     <em:description>Allows users to edit the flags Thunderbird sets on folders.</em:description>

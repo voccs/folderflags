@@ -13,7 +13,7 @@ var gFlagList = { 'MSG_FOLDER_FLAG_VIRTUAL' : 0x0020,
 FolderFlags.onLoad = function() {
     var preselectedFolderURI;
     var folderResource;
-    var serverTypeFolder;
+    var serverFolderType;
     var folderName;
     var folder;
     var flagsBundle = document.getElementById("bundle_folderflags");
