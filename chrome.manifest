@@ -8,3 +8,4 @@ locale	folderflags	en-US	jar:chrome/folderflags.jar!/locale/en-US/
 locale  folderflags	bg-BG	jar:chrome/folderflags.jar!/locale/bg-BG/
 locale  folderflags	de-DE	jar:chrome/folderflags.jar!/locale/de-DE/
 locale	folderflags	sk-SK	jar:chrome/folderflags.jar!/locale/sk-SK/
+locale	folderflags	pt-BR	jar:chrome/folderflags.jar!/locale/pt-BR/
