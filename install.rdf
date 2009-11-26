@@ -42,6 +42,9 @@
     <!-- Front End Integration Hooks (used by Extension Manager)-->
     <em:description>Allows users to edit the flags Thunderbird sets on folders.</em:description>
     <em:creator>Ryan Lee (ryan@ryanlee.org)</em:creator>
+    <em:translator>Edgard Dias Magalhaes</em:translator>
+    <em:translator>Martin Esfeld</em:translator>
+    <em:translator>Günter Gersdorf</em:translator>
     <em:iconURL>chrome://folderflags/skin/icon32x32.png</em:iconURL>
     <em:homepageURL>http://ryanlee.org/software/mozilla/thunderbird/folderflags/</em:homepageURL>
     <em:type parseType="Integer">2</em:type> <!-- type=extension -->
