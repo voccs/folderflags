@@ -1,14 +1,14 @@
-var FolderFlags = {}
+var FolderFlags = {};
 
-// flags; watch nsMsgFolderFlags.h
-var gFlagList = { 'MSG_FOLDER_FLAG_VIRTUAL' : 0x0020,
-                  'MSG_FOLDER_FLAG_TRASH' : 0x0100,
-                  'MSG_FOLDER_FLAG_SENTMAIL' : 0x0200,
-                  'MSG_FOLDER_FLAG_DRAFTS' : 0x0400,
-                  'MSG_FOLDER_FLAG_QUEUE' : 0x0800,
-                  'MSG_FOLDER_FLAG_INBOX' : 0x1000,
-                  'MSG_FOLDER_FLAG_TEMPLATES' : 0x400000,
-                  'MSG_FOLDER_FLAG_JUNK' : 0x40000000 };
+// flags; watch chrome://messenger/locale/messenger.properties for labels
+var gFlagList = { 'trash' : 0x0100,
+                  'sent' : 0x0200,
+                  'drafts' : 0x0400,
+                  'outbox' : 0x0800,
+                  'inbox' : 0x1000,
+                  'archives' : 0x4000,
+                  'templates' : 0x400000,
+                  'junk' : 0x40000000 };
 
 FolderFlags.onLoad = function() {
     var preselectedFolderURI;
@@ -17,6 +17,7 @@ FolderFlags.onLoad = function() {
     var folderName;
     var folder;
     var flagsBundle = document.getElementById("bundle_folderflags");
+    var msgrBundle = document.getElementById("bundle_messenger");
 
     var RDF = Components.classes["@mozilla.org/rdf/rdf-service;1"].getService(Components.interfaces.nsIRDFService);
 
@@ -49,17 +50,15 @@ FolderFlags.onLoad = function() {
 
     for (var flag in gFlagList) {
         var checkbox = document.createElement("checkbox");
+        var labelKey = flag + "FolderName";
+        var label = msgrBundle.getString(labelKey);
         checkbox.setAttribute("class", "indent");
         checkbox.setAttribute("id", "checkbox_" + flag);
-        checkbox.setAttribute("label", flagsBundle.getString(flag + ".label"));
+        checkbox.setAttribute("label", label);
         if (folder.flags & gFlagList[flag])
             checkbox.setAttribute("checked", "true");
         flags.appendChild(checkbox);
     }
-}
-
-FolderFlags.onUnload = function() {
-    // do nothing
 }
 
 FolderFlags.save = function() {
@@ -94,6 +93,5 @@ FolderFlags.save = function() {
     }
 
     window.close();
-
     window.opener.document.getElementById('folderTree').builder.rebuild();
 }

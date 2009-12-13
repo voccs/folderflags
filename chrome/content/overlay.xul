@@ -21,14 +21,12 @@
               insertafter="folderPaneContext-properties"/>
   </popup>
 
-  <!--menu id="menu_Edit">
-    <menupopup id="menu_Edit-folderflags-popup"
-               onpopupshowing="FolderFlagsOverlay.editPopupShowing()">
-      <menuitem id="folderFlags-menu_Edit-flags"
-                label="&folderFlagsMenuEditFlags.label;"
-                oncommand="FolderFlagsOverlay.MsgFolderFlags();"
-                insertafter="menu_properties"/>
-    </menupopup>
-  </menu-->
+  <menupopup id="menu_EditPopup"
+             onpopupshowing="FolderFlagsOverlay.editPopupShowing()">
+    <menuitem id="folderFlags-menu_Edit-flags"
+              label="&folderFlagsMenuEditFlags.label;"
+              oncommand="FolderFlagsOverlay.MsgFolderFlags();"
+              insertafter="menu_properties"/>
+  </menupopup>
 
 </overlay>

@@ -1,49 +1,38 @@
-/* overlay.js
- * Script for use in main app window overlay.
- *
- * Part of FolderFlags by Ryan Lee <ryan@ryanlee.org>
- * Copyright (c) 2005-2007 by Ryan Lee.
- * See the license.txt included in this package for licensing information.
- */
+var FolderFlagsOverlay = {};
 
-/* from widgetglue.js */
-function FolderProperties(name, oldName, uri) {
-    if (name != oldName)
-        RenameFolder(name, uri);
+FolderFlagsOverlay.MsgFolderFlags = function() {
+    var flagsBundle = document.getElementById("bundle_folderflags");
+    var folders = GetSelectedMsgFolders();
+    var msgFolder = folders.length == 1 ? folders[0] : null;
+    if (!msgFolder) return;
+    var preselectedURI = msgFolder.URI;
+    var serverType = msgFolder.server.type;
+    var name = msgFolder.prettyName;
+    var windowTitle = flagsBundle.getString("folderFlagsFolderContextPane");
+    var dialog = window.openDialog(
+          "chrome://folderflags/content/folderflags.xul",
+          "",
+          "chrome,centerscreen,titlebar,modal",
+          {preselectedURI:preselectedURI, serverType:serverType,
+          msgWindow:msgWindow, title:windowTitle,
+          tabID:"", tabIndex:0, name:name});
 }
 
-var FolderFlagsOverlay = {
-    MsgFolderFlags : function() {
-        var flagsBundle = document.getElementById("bundle_folderflags");
-        var folders = GetSelectedMsgFolders();
-        var msgFolder = folders.length == 1 ? folders[0] : null;
-        if (!msgFolder) return;
-        var preselectedURI = msgFolder.URI;
-        var serverType = msgFolder.server.type;
-        var name = msgFolder.prettyName;
-        var windowTitle = flagsBundle.getString("folderFlagsFolderContextPane");
-        var dialog = window.openDialog(
-              "chrome://folderflags/content/folderflags.xul",
-              "",
-              "chrome,centerscreen,titlebar,modal",
-              {preselectedURI:preselectedURI, serverType:serverType,
-              msgWindow:msgWindow, title:windowTitle,
-              okCallback:FolderProperties, 
-              tabID:"", tabIndex:0, name:name});
-    },
+FolderFlagsOverlay.load = function() {
+    var menu = document.getElementById("folderPaneContext");
+    if (menu)
+        menu.addEventListener("popupshowing", FolderFlagsOverlay.contextPopupShowing, false);
 
-    initOverlay : function() {
-        // this part evaluates whether to show the folder pane context menu
-        //var menu = document.getElementById("folderPaneContext");
-        //menu.addEventListener("popupshowing", function() { FolderFlagsOverlay.contextPopupShowing(); }, false);
-    },
+    menu = document.getElementById("menu_EditPopup");
+    if (menu)
+        menu.addEventListener("popupshowing", FolderFlagsOverlay.editPopupShowing, false);
+}
 
-    contextPopupShowing : function() {
-        var hide = false;
-        var menuitem = document.getElementById("folderFlags-folderPaneContext-flags");
-        var preselectedURI = GetSelectedFolderURI();
-        var msgFolder = GetMsgFolderFromUri(preselectedURI, true);
-
+FolderFlagsOverlay.contextPopupShowing = function(aEvent) {
+    var hide = false;
+    var menuitem = document.getElementById("folderFlags-folderPaneContext-flags");
+    var msgFolder = gFolderTreeView.getFolderAtCoords(aEvent.clientX, aEvent.clientY);
+    if (msgFolder != null) {
         if (menuitem) {
             // if a server is selected, do not show
             if (msgFolder.isServer) {
@@ -51,34 +40,41 @@ var FolderFlagsOverlay = {
             }
 
             // don't show vitual folder flags either... I guess?
-            if (msgFolder.flags & MSG_FOLDER_FLAG_VIRTUAL) { 
+            if (msgFolder.flags & Components.interfaces.nsMsgFolderFlags.Virtual) { 
                 hide = true;
             }
-
-            menuitem.hidden = hide;
+        } else {
+            hide = false;
         }
-    },
-
-    editPopupShowing : function() {
-        var hide = false;
-        var menuitem = document.getElementById("folderFlags-menu_Edit-flags");
-        var preselectedURI = GetSelectedFolderURI();
-        var msgFolder = GetMsgFolderFromUri(preselectedURI, true);
-
-        if (menuitem) {
-            // if a server is selected, do not show
-            if (msgFolder.isServer) {
-                hide = true;
-            }
-
-            // don't show vitual folder flags either... I guess?
-            if (msgFolder.flags & MSG_FOLDER_FLAG_VIRTUAL) { 
-                hide = true;
-            }
-
-            menuitem.hidden = hide;
-        }
+        menuitem.hidden = hide;
     }
 }
 
-window.addEventListener("load", function() { FolderFlagsOverlay.initOverlay(); }, false);
+FolderFlagsOverlay.editPopupShowing = function(aEvent) {
+    var hide = false;
+    var menuitem = document.getElementById("folderFlags-menu_Edit-flags");
+    var preselectedURI = gFolderDisplay.displayedFolder.URI;
+    var msgFolder = GetMsgFolderFromUri(preselectedURI, true);
+
+    if (menuitem) {
+        // if a server is selected, do not show
+        if (msgFolder.isServer) {
+            hide = true;
+        }
+
+        // don't show vitual folder flags either... I guess?
+        if (msgFolder.flags & Components.interfaces.nsMsgFolderFlags.Virtual) {
+            hide = true;
+        }
+
+        menuitem.hidden = hide;
+    }
+}
+
+FolderFlagsOverlay.unload = function() {
+    window.removeEventListener("load", FolderFlagsOverlay.load);
+    window.removeEventListener("unload", FolderFlagsOverlay.unload);
+}
+
+window.addEventListener("load", FolderFlagsOverlay.load, false);
+window.addEventListener("unload", FolderFlagsOverlay.unload, false);
