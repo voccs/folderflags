@@ -6,7 +6,7 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>{2bc419d0-6cf3-11da-8494-000a95be0946}</em:id>
     <em:name>FolderFlags</em:name>
-    <em:version>1.1</em:version>
+    <em:version>1.2</em:version>
     
     <!-- Thunderbird -->
     <em:targetApplication>
@@ -21,7 +21,7 @@
     <em:targetApplication>
       <Description>
         <em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
-        <em:minVersion>1.1</em:minVersion>
+        <em:minVersion>2.0</em:minVersion>
         <em:maxVersion>2.0.*</em:maxVersion>
       </Description>
     </em:targetApplication>
@@ -35,10 +35,6 @@
       </Description>
     </em:file>
 
-    <!-- Is em:updateKey compatible with distributing through a.m.o?
-    <em:updateKey>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDJPpUYKZWucZcgI7PwQo15iV/gGdyUdufUdHjguGukN/1FJ2cFuQa+yOrYh9sDeCrvlvhQd996UzUp7zFO3Y5NiDUAa0S+C584yXPF/xZ9MVNcD2vv1gX4seErfVKhgIGceyWtm5TC/VHXF4yCSQha8B/MrEmBiwXe6ZjSGTxnWwIDAQAB</em:updateKey>
-    -->
-
     <!-- Front End Integration Hooks (used by Extension Manager)-->
     <em:description>Allows users to edit the flags Thunderbird sets on folders.</em:description>
     <em:creator>Ryan Lee (ryan@ryanlee.org)</em:creator>
@@ -48,5 +44,14 @@
     <em:iconURL>chrome://folderflags/skin/icon32x32.png</em:iconURL>
     <em:homepageURL>http://ryanlee.org/software/mozilla/thunderbird/folderflags/</em:homepageURL>
     <em:type parseType="Integer">2</em:type> <!-- type=extension -->
+
+    <!--em:localized>
+      <Description>
+        <em:locale>de-DE</em:locale>
+        <em:name>FolderFlags</em:name>
+        <em:description></em:description>
+      </Description>
+    </em:localized-->
+
   </Description>
 </RDF>
