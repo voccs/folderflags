@@ -1,2 +1,1 @@
-- failing to attach to edit menu
-- failing to control visibility of context click
+- how to make v2 vs v3 compatible - see end of https://developer.mozilla.org/en/Extensions/Thunderbird/HowTos/Common_Thunderbird_Extension_Techniques/Add_Option_to_Context_Menu for different overlay depending on version; different overlay loads different const js, one for v2, other for v3 - overlay js needs to be different as well
