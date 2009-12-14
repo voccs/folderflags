@@ -45,13 +45,13 @@
     <em:homepageURL>http://ryanlee.org/software/mozilla/thunderbird/folderflags/</em:homepageURL>
     <em:type parseType="Integer">2</em:type> <!-- type=extension -->
 
-    <!--em:localized>
+    <em:localized>
       <Description>
-        <em:locale>de-DE</em:locale>
+        <em:locale>it-IT</em:locale>
         <em:name>FolderFlags</em:name>
-        <em:description></em:description>
+        <em:description>Consente agli utenti di modificare i flag impostati da Thunderbird sulle cartelle.</em:description>
       </Description>
-    </em:localized-->
+    </em:localized>
 
   </Description>
 </RDF>
