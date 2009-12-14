@@ -1,0 +1,5 @@
+<!ENTITY folderFlags.label "Flag">
+<!ENTITY folderFlagsDescription.label "Flag da associare con questa cartella">
+<!ENTITY folderFlagsFolderPaneContextFlags.label "Flag...">
+<!ENTITY folderFlagsFolderPaneContextFlags.accesskey "F">
+<!ENTITY folderFlagsMenuEditFlags.label "Flag della cartella...">
