@@ -1,5 +1,5 @@
 <!ENTITY folderFlags.label "Atributos da pasta (Flags)">
-<!ENTITY folderFlagsDescription.label "Atributos a serem associados a esta (Flags)">
+<!ENTITY folderFlagsDescription.label "Atributos a serem associados a esta pasta (Flags)">
 <!ENTITY folderFlagsFolderPaneContextFlags.label "Atributos da pasta (Flags)...">
 <!ENTITY folderFlagsFolderPaneContextFlags.accesskey "F">
 <!ENTITY folderFlagsMenuEditFlags.label "Atributos da pasta (Flags)...">
