@@ -1,0 +1,5 @@
+<!ENTITY folderFlags.label "Etikety">
+<!ENTITY folderFlagsDescription.label "Etikety k přidružení k této složce">
+<!ENTITY folderFlagsFolderPaneContextFlags.label "Etikety složky...">
+<!ENTITY folderFlagsFolderPaneContextFlags.accesskey "E">
+<!ENTITY folderFlagsMenuEditFlags.label "Etikety složky...">
