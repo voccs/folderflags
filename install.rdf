@@ -42,6 +42,7 @@
     <em:translator>Martin Esfeld</em:translator>
     <em:translator>Günter Gersdorf</em:translator>
     <em:translator>Archaeopteryx (BabelZilla)</em:translator>
+    <em:translator>Carlos Simão</em:translator>
     <em:iconURL>chrome://folderflags/skin/icon32x32.png</em:iconURL>
     <em:homepageURL>http://ryanlee.org/software/mozilla/thunderbird/folderflags/</em:homepageURL>
     <em:type parseType="Integer">2</em:type> <!-- type=extension -->
@@ -75,6 +76,14 @@
         <em:locale>de-DE</em:locale>
         <em:name>FolderFlags</em:name>
         <em:description>Erlaubt dem Benutzer die Veränderung der Ordnerkategorien, welche Thunderbird den Ordner zuteilt.</em:description>
+      </Description>
+    </em:localized>
+
+    <em:localized>
+      <Description>
+        <em:locale>pt-PT</em:locale>
+        <em:name>FolderFlags</em:name>
+        <em:description>Permitir aos utilizadores editar as etiquetas do Thunderbird aplicadas na pasta.</em:description>
       </Description>
     </em:localized>
 

@@ -11,3 +11,4 @@ locale	folderflags	sk-SK	jar:chrome/folderflags.jar!/locale/sk-SK/
 locale	folderflags	pt-BR	jar:chrome/folderflags.jar!/locale/pt-BR/
 locale	folderflags	it-IT	jar:chrome/folderflags.jar!/locale/it-IT/
 locale	folderflags	cs-CZ	jar:chrome/folderflags.jar!/locale/cs-CZ/
+locale	folderflags	pt-PT	jar:chrome/folderflags.jar!/locale/pt-PT/
