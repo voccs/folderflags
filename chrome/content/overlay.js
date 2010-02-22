@@ -31,7 +31,12 @@ FolderFlagsOverlay.load = function() {
 FolderFlagsOverlay.contextPopupShowing = function(aEvent) {
     var hide = false;
     var menuitem = document.getElementById("folderFlags-folderPaneContext-flags");
-    var msgFolder = gFolderTreeView.getFolderAtCoords(aEvent.clientX, aEvent.clientY);
+    var msgFolder;
+    if (window.gFolderTreeView) {
+        msgFolder =  gFolderTreeView.getFolderAtCoords(aEvent.clientX, aEvent.clientY);
+    } else {
+        msgFolder = GetMsgFolderFromUri(GetSelectedFolderURI(), true);
+    }
     if (msgFolder != null) {
         if (menuitem) {
             // if a server is selected, do not show
@@ -72,8 +77,8 @@ FolderFlagsOverlay.editPopupShowing = function(aEvent) {
 }
 
 FolderFlagsOverlay.unload = function() {
-    window.removeEventListener("load", FolderFlagsOverlay.load);
-    window.removeEventListener("unload", FolderFlagsOverlay.unload);
+    window.removeEventListener("load", FolderFlagsOverlay.load, false);
+    window.removeEventListener("unload", FolderFlagsOverlay.unload, false);
 }
 
 window.addEventListener("load", FolderFlagsOverlay.load, false);
