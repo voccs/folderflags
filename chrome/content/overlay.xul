@@ -21,8 +21,7 @@
               insertafter="folderPaneContext-properties"/>
   </popup>
 
-  <menupopup id="menu_EditPopup"
-             onpopupshowing="FolderFlagsOverlay.editPopupShowing()">
+  <menupopup id="menu_EditPopup">
     <menuitem id="folderFlags-menu_Edit-flags"
               label="&folderFlagsMenuEditFlags.label;"
               oncommand="FolderFlagsOverlay.MsgFolderFlags();"
