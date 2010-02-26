@@ -23,7 +23,7 @@ FolderFlagsOverlay.load = function() {
     if (menu)
         menu.addEventListener("popupshowing", FolderFlagsOverlay.contextPopupShowing, false);
 
-    menu = document.getElementById("menu_EditPopup");
+    menu = document.getElementById("menu_EditPopup") || document.getElementById("menu_Edit_Popup");
     if (menu)
         menu.addEventListener("popupshowing", FolderFlagsOverlay.editPopupShowing, false);
 }
@@ -57,7 +57,7 @@ FolderFlagsOverlay.contextPopupShowing = function(aEvent) {
 
 FolderFlagsOverlay.editPopupShowing = function(aEvent) {
     var hide = false;
-    var menuitem = document.getElementById("folderFlags-menu_Edit-flags");
+    var menuitem = document.getElementById("folderFlags-menu_Edit-flags") || document.getElementById("folderFlags-menu_Edit-flags-seamonkey");
     var preselectedURI = gFolderDisplay.displayedFolder.URI;
     var msgFolder = GetMsgFolderFromUri(preselectedURI, true);
 

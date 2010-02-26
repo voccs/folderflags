@@ -29,4 +29,11 @@
               insertafter="menu_properties"/>
   </menupopup>
 
+  <menupopup id="menu_Edit_Popup">
+    <menuitem id="folderFlags-menu_Edit-flags-seamonkey"
+              label="&folderFlagsMenuEditFlags.label;"
+              oncommand="FolderFlagsOverlay.MsgFolderFlags();"
+              insertafter="menu_properties"/>
+  </menupopup>
+
 </overlay>
