@@ -81,5 +81,29 @@
       </Description>
     </em:localized>
 
+    <em:localized>
+      <Description>
+        <em:locale>sr</em:locale>
+        <em:name>FolderFlags</em:name>
+        <em:description>Омогућава уређивање сврха фасцикли у Тандерберду.</em:description>
+      </Description>
+    </em:localized>
+
+    <em:localized>
+      <Description>
+        <em:locale>it</em:locale>
+        <em:name>FolderFlags</em:name>
+        <em:description>Permette di modificare le immagini delle cartelle di Thunderbird.</em:description>
+      </Description>
+    </em:localized>
+
+    <em:localized>
+      <Description>
+        <em:locale>ja-JP</em:locale>
+        <em:name>FolderFlags</em:name>
+        <em:description>Thunderbirdがフォルダーに設定するフラグの編集をユーザーに許可します。</em:description>
+      </Description>
+    </em:localized>
+
   </Description>
 </RDF>
