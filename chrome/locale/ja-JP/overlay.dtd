@@ -1,0 +1,5 @@
+<!ENTITY folderFlags.label "フラグ">
+<!ENTITY folderFlagsDescription.label "このフォルダーに関連するフラグ">
+<!ENTITY folderFlagsFolderPaneContextFlags.label "フラグ...">
+<!ENTITY folderFlagsFolderPaneContextFlags.accesskey "F">
+<!ENTITY folderFlagsMenuEditFlags.label "フォルダーのフラグ...">

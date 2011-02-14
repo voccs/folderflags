@@ -1,0 +1,5 @@
+<!ENTITY folderFlags.label "Immagini associate alle cartelle">
+<!ENTITY folderFlagsDescription.label "Immagine da associare alla cartella">
+<!ENTITY folderFlagsFolderPaneContextFlags.label "Immagini…">
+<!ENTITY folderFlagsFolderPaneContextFlags.accesskey "I">
+<!ENTITY folderFlagsMenuEditFlags.label "Immagini delle cartelle…">
