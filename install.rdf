@@ -6,7 +6,7 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>{2bc419d0-6cf3-11da-8494-000a95be0946}</em:id>
     <em:name>FolderFlags</em:name>
-    <em:version>1.2.1</em:version>
+    <em:version>1.2.2</em:version>
     <em:type>2</em:type> <!-- type=extension -->
     
     <!-- Thunderbird -->
@@ -78,6 +78,30 @@
         <em:locale>pt-PT</em:locale>
         <em:name>FolderFlags</em:name>
         <em:description>Permitir aos utilizadores editar as etiquetas do Thunderbird aplicadas na pasta.</em:description>
+      </Description>
+    </em:localized>
+
+    <em:localized>
+      <Description>
+        <em:locale>sr</em:locale>
+        <em:name>FolderFlags</em:name>
+        <em:description>Омогућава уређивање сврха фасцикли у Тандерберду.</em:description>
+      </Description>
+    </em:localized>
+
+    <em:localized>
+      <Description>
+        <em:locale>it</em:locale>
+        <em:name>FolderFlags</em:name>
+        <em:description>Permette di modificare le immagini delle cartelle di Thunderbird.</em:description>
+      </Description>
+    </em:localized>
+
+    <em:localized>
+      <Description>
+        <em:locale>ja-JP</em:locale>
+        <em:name>FolderFlags</em:name>
+        <em:description>Thunderbirdがフォルダーに設定するフラグの編集をユーザーに許可します。</em:description>
       </Description>
     </em:localized>
 
