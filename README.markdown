@@ -19,5 +19,12 @@ translation for upload to BabelZilla (`babelzilla`), which includes strings
 that are used in the `install.rdf` and addons.mozilla.org and consequently
 sit outside the normal flow of translation.
 
+Mechanism
+---------
+
+FolderFlags overlays `chrome://messenger/content/folderProps.xul` and so
+adds a new tab, which reads and writes Thunderbird's settings for the
+selected folder.
+
 [1]: https://addons.mozilla.org/thunderbird/addon/folderflags/
 [2]: http://www.babelzilla.org/
