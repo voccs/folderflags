@@ -38,6 +38,8 @@
     <em:translator>ДакСРБИЈА</em:translator>
     <em:translator>Luana Di Muzio - BabelZilla</em:translator>
     <em:translator>elf (Babelzilla)</em:translator>
+    <em:translator>Mikael Hiort af Ornäs</em:translator>
+    <em:translator>yfdyh000 (yfdyh000@gmail.com)</em:translator>
     <em:iconURL>chrome://folderflags/skin/icon32x32.png</em:iconURL>
     <em:homepageURL>http://ryanlee.org/software/mozilla/thunderbird/folderflags/</em:homepageURL>
 
@@ -102,6 +104,22 @@
         <em:locale>ja-JP</em:locale>
         <em:name>FolderFlags</em:name>
         <em:description>Thunderbirdがフォルダーに設定するフラグの編集をユーザーに許可します。</em:description>
+      </Description>
+    </em:localized>
+
+    <em:localized>
+      <Description>
+        <em:locale>sv-SE</em:locale>
+        <em:name>FolderFlags</em:name>
+        <em:description>Låter användare redigera de flaggor som Thunderbird anger för mappar.</em:description>
+      </Description>
+    </em:localized>
+
+    <em:localized>
+      <Description>
+        <em:locale>zh-CN</em:locale>
+        <em:name>FolderFlags</em:name>
+        <em:description>让用户在文件夹上编辑 Thunderbird 设置的旗帜。</em:description>
       </Description>
     </em:localized>
 

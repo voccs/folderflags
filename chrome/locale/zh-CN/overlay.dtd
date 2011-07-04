@@ -1,0 +1,5 @@
+<!ENTITY folderFlags.label "旗帜">
+<!ENTITY folderFlagsDescription.label "旗帜已被关联到此文件夹">
+<!ENTITY folderFlagsFolderPaneContextFlags.label "旗帜...">
+<!ENTITY folderFlagsFolderPaneContextFlags.accesskey "F">
+<!ENTITY folderFlagsMenuEditFlags.label "文件夹旗帜...">
