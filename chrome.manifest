@@ -1,6 +1,6 @@
 content	folderflags	jar:chrome/folderflags.jar!/content/
 
-overlay	chrome://messenger/content/mailWindowOverlay.xul	chrome://folderflags/content/overlay.xul
+overlay chrome://messenger/content/folderProps.xul          chrome://folderflags/content/folderProps.xul
 
 skin	folderflags	classic/1.0	jar:chrome/folderflags.jar!/skin/
 
