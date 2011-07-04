@@ -1,7 +1,0 @@
-<!ENTITY folderFlags.label "Flags">
-<!ENTITY folderFlagsDescription.label "Kennzeichen für diesen Ordner">
-
-<!ENTITY folderFlagsFolderPaneContextFlags.label "Flags...">
-<!ENTITY folderFlagsFolderPaneContextFlags.accesskey "F">
-
-<!ENTITY folderFlagsMenuEditFlags.label "Ordner Kennzeichen...">

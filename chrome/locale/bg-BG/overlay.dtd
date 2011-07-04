@@ -1,7 +1,0 @@
-<!ENTITY folderFlags.label "Флагове">
-<!ENTITY folderFlagsDescription.label "Флагове свързани с тази папка">
-
-<!ENTITY folderFlagsFolderPaneContextFlags.label "Флагове...">
-<!ENTITY folderFlagsFolderPaneContextFlags.accesskey "Ф">
-
-<!ENTITY folderFlagsMenuEditFlags.label "Флагове на папка...">

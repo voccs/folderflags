@@ -1,7 +1,0 @@
-<!ENTITY folderFlags.label "Flags">
-<!ENTITY folderFlagsDescription.label "Flags to be associated with this folder">
-
-<!ENTITY folderFlagsFolderPaneContextFlags.label "Flags...">
-<!ENTITY folderFlagsFolderPaneContextFlags.accesskey "F">
-
-<!ENTITY folderFlagsMenuEditFlags.label "Folder Flags...">
