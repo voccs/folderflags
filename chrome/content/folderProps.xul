@@ -13,7 +13,7 @@
           src="chrome://folderflags/content/folderflags.js"/>
 
   <tabs id="folderPropTabs">
-    <tab id="FlagsTab" hidefor="movemail,rss,none,nntp" label="&folderflags.tab.label;"/>
+    <tab id="FlagsTab" hidefor="rss,nntp" label="&folderflags.tab.label;"/>
   </tabs>
 
   <tabpanels id="folderPropTabPanels">
