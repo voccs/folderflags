@@ -6,9 +6,6 @@
   id="folderPropertiesDialog"
   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-  <stringbundle id="bundle_folderflags"
-                src="chrome://folderflags/locale/folderflags.properties" />
-
   <script type="application/javascript" 
           src="chrome://folderflags/content/folderflags.js"/>
 
