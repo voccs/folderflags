@@ -11,9 +11,9 @@
   "description": "__MSG_extensionDescription__",
   "author": "Ryan Lee (ryan@ryanlee.org)",
   "homepage_url": "http://ryanlee.org/software/mozilla/thunderbird/folderflags/",
-  "icons": [
+  "icons": {
     "32": "chrome/skin/icon32x32.png"
-  ],
+  },
   "legacy": {
     "type": "xul"
   },
