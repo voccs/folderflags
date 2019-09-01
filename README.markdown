@@ -26,5 +26,22 @@ FolderFlags overlays `chrome://messenger/content/folderProps.xul` and so
 adds a new tab, which reads and writes Thunderbird's settings for the
 selected folder.
 
+Translators
+-----------
+
+With the change from `install.rdf` to `manifest.json`, I'm no longer able to credit translators directly in the extension metadata, so this list will have to suffice for now.  Many thanks for the translation work freely given by:
+
+* Edgard Dias Magalhaes
+* Martin Esfeld
+* Günter Gersdorf
+* Archaeopteryx (BabelZilla)
+* Carlos Simão
+* ДакСРБИЈА
+* Luana Di Muzio - BabelZilla
+* elf (Babelzilla)
+* Mikael Hiort af Ornäs
+* yfdyh000 (yfdyh000@gmail.com)
+* Scooter (Babelzilla)
+
 [1]: https://addons.mozilla.org/thunderbird/addon/folderflags/
 [2]: http://www.babelzilla.org/
