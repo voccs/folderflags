@@ -3,12 +3,12 @@ all: folderflags.xpi
 folderflags.xpi:
 	make -f Makefile.chrome -C chrome folderflags.jar
 	rm -f $@
-	zip $@ chrome/folderflags.jar install.rdf license.txt chrome.manifest
+	zip $@ chrome/folderflags.jar manifest.json license.txt chrome.manifest
 
 babelzilla:
 	make -f Makefile.chrome -C chrome babelzilla
 	rm -rf folderflags.xpi
-	zip folderflags.xpi chrome/folderflags.jar install.rdf license.txt chrome.manifest
+	zip folderflags.xpi chrome/folderflags.jar manifest.json license.txt chrome.manifest
 
 localize:
 	rm -rf chrome/locale/*

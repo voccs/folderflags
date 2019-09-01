@@ -16,7 +16,7 @@ Development
 This is a Make based project.  There are two main targets, one builds the
 XPI appropriate for deployment (`all`), the other builds an XPI for
 translation for upload to BabelZilla (`babelzilla`), which includes strings
-that are used in the `install.rdf` and addons.mozilla.org and consequently
+that are used in the `manifest.json` and addons.mozilla.org and consequently
 sit outside the normal flow of translation.
 
 Mechanism
