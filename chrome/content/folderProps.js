@@ -1,3 +1,6 @@
+var gFolderTreeView;
+var gMsgFolder;
+
 var FolderFlags = {
     // flags; watch chrome://messenger/locale/messenger.properties for labels
     'flagList': {
@@ -33,8 +36,9 @@ FolderFlags.onLoad = function() {
     folderNameLabel.value = window.arguments[0].name
 
     // Fill out a grid of viable flags
+    const fragment = document.createDocumentFragment();
     for (var flag in FolderFlags.flagList) {
-        var checkbox = document.createElement("checkbox");
+        var checkbox = document.createXULElement("checkbox");
         var labelKey = flag + "FolderName";
         var label = msgrBundle.getString(labelKey);
         checkbox.setAttribute("class", "indent");
@@ -42,13 +46,12 @@ FolderFlags.onLoad = function() {
         checkbox.setAttribute("label", label);
         if (gMsgFolder.flags & FolderFlags.flagList[flag])
             checkbox.setAttribute("checked", "true");
-        flags.appendChild(checkbox);
+        fragment.appendChild(checkbox);
     }
+    flags.appendChild(fragment);
 };
 
 FolderFlags.onUnload = function() {
-    window.removeEventListener("load", FolderFlags.onLoad, false);
-    window.removeEventListener("unload", FolderFlags.onUnload, false);
     window.removeEventListener("dialogaccept", FolderFlags.save, false);
 };
 
@@ -68,9 +71,38 @@ FolderFlags.save = function() {
         }
     }
 
-    window.opener.document.getElementById('folderTree').builder.rebuild();
+    // Refresh folder tree pane
+    //window.opener.document.getElementById('folderTree').builder.rebuild();
+    gFolderTreeView.mode = gFolderTreeView.mode;
 };
 
-window.addEventListener("load", FolderFlags.onLoad, false);
-window.addEventListener("unload", FolderFlags.onUnload, false);
+function onLoad(activatedWhileWindowOpen) {
+    if (window.arguments[0].folder) {
+        gMsgFolder = window.arguments[0].folder;
+        gFolderTreeView = window.arguments[0].treeView;
+    }
+
+    WL.injectElements(`
+        <tabs id="folderPropTabs">
+            <tab id="FlagsTab" hidefor="rss,nntp" label="&folderflags.tab.label;"/>
+        </tabs>
+        <tabpanels id="folderPropTabPanels">
+            <vbox id="folderflags-tabPanel" align="start">
+                <hbox align="center" valign="middle">
+                    <label>&folder;</label><label id="folderflags-folderName" />
+                </hbox>
+                <vbox id="folderflags-flaglist">
+                </vbox>
+            </vbox>
+        </tabpanels>
+    `,
+    ["chrome://folderflags/locale/folderflags.dtd"]);
+
+  FolderFlags.onLoad();
+}
+
+function onUnload(deactivatedWhileWindowOpen) {
+  FolderFlags.onUnload();
+}
+
 window.addEventListener("dialogaccept", FolderFlags.save, false);

@@ -1,4 +1,8 @@
-all: folderflags.xpi
+all: dist
+
+dist:
+	rm -f folderflags.xpi
+	zip folderflags.xpi --exclude=chrome/Makefile.chrome -r manifest.json background.js license.txt api chrome _locales
 
 folderflags.xpi:
 	make -f Makefile.chrome -C chrome folderflags.jar
