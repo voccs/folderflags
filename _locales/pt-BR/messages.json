@@ -1,10 +1,19 @@
 {
-  "extensionName": {
-    "message": "FolderFlags",
-    "description": "Name of the extension"
-  },
-  "extensionDescription": {
-    "message": "Permite aos usuários editar as configurações de atributos (flags) Thunderbird nas pastas.",
-    "description": "Description of the extension"
-  }
+    "extensionDescription": {
+        "description": "Description of the extension",
+        "message": "Permite aos usuários editar as configurações de atributos (flags) Thunderbird nas pastas."
+    },
+    "extensionName": {
+        "description": "Name of the extension",
+        "message": "FolderFlags"
+    },
+    "folder": {
+        "message": "Pasta:"
+    },
+    "folderflags.tab.label": {
+        "message": "Atributos da pasta (Flags)"
+    },
+    "folderflags.title": {
+        "message": "Atributos da pasta (Flags)"
+    }
 }

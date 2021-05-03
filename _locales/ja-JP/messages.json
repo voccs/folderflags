@@ -1,10 +1,19 @@
 {
-  "extensionName": {
-    "message": "FolderFlags",
-    "description": "Name of the extension"
-  },
-  "extensionDescription": {
-    "message": "Thunderbirdがフォルダーに設定するフラグの編集をユーザーに許可します。",
-    "description": "Description of the extension"
-  }
+    "extensionDescription": {
+        "description": "Description of the extension",
+        "message": "Thunderbirdがフォルダーに設定するフラグの編集をユーザーに許可します。"
+    },
+    "extensionName": {
+        "description": "Name of the extension",
+        "message": "FolderFlags"
+    },
+    "folder": {
+        "message": "フォルダー:"
+    },
+    "folderflags.tab.label": {
+        "message": "フラグ"
+    },
+    "folderflags.title": {
+        "message": "フラグ"
+    }
 }

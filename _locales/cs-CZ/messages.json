@@ -1,10 +1,19 @@
 {
-  "extensionName": {
-    "message": "FolderFlags",
-    "description": "Name of the extension"
-  },
-  "extensionDescription": {
-    "message": "Uživateli umožní upravit etikety složek v Thunderbirdu.",
-    "description": "Description of the extension"
-  }
+    "extensionDescription": {
+        "description": "Description of the extension",
+        "message": "Uživateli umožní upravit etikety složek v Thunderbirdu."
+    },
+    "extensionName": {
+        "description": "Name of the extension",
+        "message": "FolderFlags"
+    },
+    "folder": {
+        "message": "Složka:"
+    },
+    "folderflags.tab.label": {
+        "message": "Etikety"
+    },
+    "folderflags.title": {
+        "message": "Etikety složky"
+    }
 }
