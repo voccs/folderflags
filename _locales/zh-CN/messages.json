@@ -1,19 +1,19 @@
 {
     "extensionDescription": {
         "description": "Description of the extension",
-        "message": "Allows users to edit the flags Thunderbird sets on folders."
+        "message": "让用户在文件夹上编辑 Thunderbird 设置的旗帜。"
     },
     "extensionName": {
         "description": "Name of the extension",
         "message": "FolderFlags"
     },
     "folder": {
-        "message": "Folder:"
+        "message": "文件夹："
     },
     "folderflags.tab.label": {
-        "message": "Flags"
+        "message": "旗帜"
     },
     "folderflags.title": {
-        "message": "Flags"
+        "message": "旗帜"
     }
 }

@@ -1,19 +1,19 @@
 {
     "extensionDescription": {
         "description": "Description of the extension",
-        "message": "Allows users to edit the flags Thunderbird sets on folders."
+        "message": "Erlaubt dem Benutzer die Veränderung der Ordnerkategorien, welche Thunderbird den Ordner zuteilt."
     },
     "extensionName": {
         "description": "Name of the extension",
         "message": "FolderFlags"
     },
     "folder": {
-        "message": "Folder:"
+        "message": "Ordner:"
     },
     "folderflags.tab.label": {
-        "message": "Flags"
+        "message": "Ordnerkategorien"
     },
     "folderflags.title": {
-        "message": "Flags"
+        "message": "Ordnerkategorien"
     }
 }

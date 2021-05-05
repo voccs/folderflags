@@ -1,19 +1,19 @@
 {
     "extensionDescription": {
         "description": "Description of the extension",
-        "message": "Allows users to edit the flags Thunderbird sets on folders."
+        "message": "Consente agli utenti di modificare i flag impostati da Thunderbird sulle cartelle."
     },
     "extensionName": {
         "description": "Name of the extension",
         "message": "FolderFlags"
     },
     "folder": {
-        "message": "Folder:"
+        "message": "Cartella:"
     },
     "folderflags.tab.label": {
-        "message": "Flags"
+        "message": "Immagini associate alle cartelle"
     },
     "folderflags.title": {
-        "message": "Flags"
+        "message": "Opzioni di FolderFlags"
     }
 }

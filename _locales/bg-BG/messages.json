@@ -8,12 +8,12 @@
         "message": "FolderFlags"
     },
     "folder": {
-        "message": "Folder:"
+        "message": "Папка:"
     },
     "folderflags.tab.label": {
-        "message": "Flags"
+        "message": "Флагове"
     },
     "folderflags.title": {
-        "message": "Flags"
+        "message": "Флагове"
     }
 }
