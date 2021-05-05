@@ -31,6 +31,8 @@ Contributors
 
 Many thanks to [Itagaki Fumihiko](https://github.com/itagagaki) for contributing the work to bring this add-on up to date with the fundamental shift in Thunderbird add-on architecture, from me and from the users who were waiting on this effort.
 
+Also thanks to [John Bieling](https://github.com/jobisoft) for contributing internationalization updates.
+
 Translators
 -----------
 
