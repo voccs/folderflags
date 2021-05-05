@@ -1,19 +1,19 @@
 {
     "extensionDescription": {
         "description": "Description of the extension",
-        "message": "Allows users to edit the flags Thunderbird sets on folders."
+        "message": "Thunderbirdがフォルダーに設定するフラグの編集をユーザーに許可します。"
     },
     "extensionName": {
         "description": "Name of the extension",
         "message": "FolderFlags"
     },
     "folder": {
-        "message": "Folder:"
+        "message": "フォルダー:"
     },
     "folderflags.tab.label": {
-        "message": "Flags"
+        "message": "フラグ"
     },
     "folderflags.title": {
-        "message": "Flags"
+        "message": "フラグ"
     }
 }
