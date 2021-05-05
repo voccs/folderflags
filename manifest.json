@@ -7,7 +7,7 @@
     }
   },
   "name": "__MSG_extensionName__",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "__MSG_extensionDescription__",
   "author": "Ryan Lee (ryan@ryanlee.org)",
   "homepage_url": "http://ryanlee.org/software/mozilla/thunderbird/folderflags/",
