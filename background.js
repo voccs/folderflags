@@ -3,7 +3,7 @@ browser.WindowListener.registerChromeUrl([
   ["locale",   "folderflags", "bg-BG", "chrome/locale/bg-BG/"],
   ["locale",   "folderflags", "cs-CZ", "chrome/locale/cz-CZ/"],
   ["locale",   "folderflags", "de",    "chrome/locale/de/"],
-  ["locale",   "folderflags", "en-US", "chrome/locale/en-US/"],
+  ["locale",   "folderflags", "en-US", "chrome/locale/en/"],
   ["locale",   "folderflags", "es-ES", "chrome/locale/es-ES/"],
   ["locale",   "folderflags", "it",    "chrome/locale/it/"],
   ["locale",   "folderflags", "ja-JP", "chrome/locale/ja-JP/"],
