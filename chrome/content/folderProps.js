@@ -83,20 +83,15 @@ function onLoad(activatedWhileWindowOpen) {
     }
 
     WL.injectElements(`
-        <tabs id="folderPropTabs">
-            <tab id="FlagsTab" hidefor="rss,nntp" label="&folderflags.tab.label;"/>
-        </tabs>
-        <tabpanels id="folderPropTabPanels">
-            <vbox id="folderflags-tabPanel" align="start">
-                <hbox align="center" valign="middle">
-                    <label>&folder;</label><label id="folderflags-folderName" />
-                </hbox>
-                <vbox id="folderflags-flaglist">
-                </vbox>
+        <tab insertafter="QuotaTab" id="FlagsTab" hidefor="rss,nntp" label="__MSG_folderflags.tab.label__"/>
+        <vbox insertafter="quotaPanel" id="folderflags-tabPanel" align="start">
+            <hbox align="center" valign="middle">
+                <label>__MSG_folder__</label><label id="folderflags-folderName" />
+            </hbox>
+            <vbox id="folderflags-flaglist">
             </vbox>
-        </tabpanels>
-    `,
-    ["chrome://folderflags/locale/folderflags.dtd"]);
+        </vbox>
+    `);
 
   FolderFlags.onLoad();
 }
