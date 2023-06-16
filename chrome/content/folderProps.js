@@ -29,18 +29,25 @@ FolderFlags.onLoad = function() {
     if (!FolderFlags._checkEnv())
         return;
 
-    var msgrBundle = document.getElementById("bundle_messenger");
     var flags = document.getElementById("folderflags-flaglist");
 
     var folderNameLabel = document.getElementById("folderflags-folderName");
-    folderNameLabel.value = window.arguments[0].name
+    folderNameLabel.value = window.arguments[0].name;
+    const FI = gMsgFolder.QueryInterface(Ci.nsIMsgFolder);
+    
 
     // Fill out a grid of viable flags
     const fragment = document.createDocumentFragment();
     for (var flag in FolderFlags.flagList) {
         var checkbox = document.createXULElement("checkbox");
         var labelKey = flag + "FolderName";
-        var label = msgrBundle.getString(labelKey);
+        var label = labelKey; // msgrBundle.getString(labelKey);
+        try {
+            label = FI.getStringWithFolderNameFromBundle(labelKey);
+        }
+        catch(ex) {
+            console.log(ex);
+        }
         checkbox.setAttribute("class", "indent");
         checkbox.setAttribute("id", "checkbox_" + flag);
         checkbox.setAttribute("label", label);
