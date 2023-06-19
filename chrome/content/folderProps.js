@@ -41,7 +41,7 @@ FolderFlags.onLoad = function() {
     for (var flag in FolderFlags.flagList) {
         var checkbox = document.createXULElement("checkbox");
         var labelKey = flag + "FolderName";
-        var label = labelKey; // msgrBundle.getString(labelKey);
+        var label = labelKey;
         try {
             label = FI.getStringWithFolderNameFromBundle(labelKey);
         }
