@@ -49,34 +49,6 @@
       if (debug) console.log(elements);
 
       for (let i = 0; i < elements.length; i++) {
-        // take care of persists
-        const uri = window.document.documentURI;
-        for (const persistentNode of elements[i].querySelectorAll(
-          "[persist]"
-        )) {
-          for (const persistentAttribute of persistentNode
-            .getAttribute("persist")
-            .trim()
-            .split(" ")) {
-            if (
-              Services.xulStore.hasValue(
-                uri,
-                persistentNode.id,
-                persistentAttribute
-              )
-            ) {
-              persistentNode.setAttribute(
-                persistentAttribute,
-                Services.xulStore.getValue(
-                  uri,
-                  persistentNode.id,
-                  persistentAttribute
-                )
-              );
-            }
-          }
-        }
-
         if (
           elements[i].hasAttribute("insertafter") &&
           checkElements(elements[i].getAttribute("insertafter"))
@@ -145,7 +117,7 @@
           elements[i].id &&
           window.document.getElementById(elements[i].id)
         ) {
-          // existing container match, dive into recursivly
+          // existing container match, dive into recursively
           if (debug)
             console.log(
               elements[i].tagName +
