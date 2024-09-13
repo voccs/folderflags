@@ -12,8 +12,6 @@
     "resource:///modules/FolderUtils.sys.mjs"
   );
 
-  const addonId = "2bc419d0-6cf3-11da-8494-000a95be0946"
-
   const flagList = {
     'trash': 0x0100,
     'sent': 0x0200,
@@ -27,7 +25,7 @@
 
   // Helper function to inject a legacy XUL string into the DOM of Thunderbird.
   // All injected elements will get the data attribute "data-extension-injected"
-  // set to the addonId defined above, to allow easy removal.
+  // set to the extensions id, for easy removal.
   const injectElements = function (extension, window, xulString, debug = false) {
     function checkElements(stringOfIDs) {
       let arrayOfIDs = stringOfIDs.split(",").map((e) => e.trim());
@@ -76,7 +74,7 @@
               "> of the injected element already exists in the document!"
             );
           }
-          elements[i].setAttribute("data-extension-injected", addonId);
+          elements[i].setAttribute("data-extension-injected", extension.id);
           insertAfterElement.parentNode.insertBefore(
             elements[i],
             insertAfterElement.nextSibling
@@ -108,7 +106,7 @@
               "> of the injected element already exists in the document!"
             );
           }
-          elements[i].setAttribute("data-extension-injected", addonId);
+          elements[i].setAttribute("data-extension-injected", extension.id);
           insertBeforeElement.parentNode.insertBefore(
             elements[i],
             insertBeforeElement
@@ -140,7 +138,7 @@
               ": append to " +
               container.id
             );
-          elements[i].setAttribute("data-extension-injected", addonId);
+          elements[i].setAttribute("data-extension-injected", extension.id);
           container.appendChild(elements[i]);
         }
       }
@@ -205,11 +203,11 @@
     window.addEventListener("dialogaccept", save, false);
   };
 
-  const onUnload = function (window) {
+  const onUnload = function (window, extension) {
     // Remove all injected objects.
     let elements = Array.from(
       window.document.querySelectorAll(
-        '[data-extension-injected="' + addonId + '"]'
+        '[data-extension-injected="' + extension.id + '"]'
       )
     );
     for (let element of elements) {
@@ -257,7 +255,7 @@
 
     onStartup() {
       const { extension } = this;
-      ExtensionSupport.registerWindowListener(addonId, {
+      ExtensionSupport.registerWindowListener(extension.id, {
         chromeURLs: [
           "chrome://messenger/content/folderProps.xhtml",
         ],
@@ -272,15 +270,16 @@
         return;
       }
 
+      const { extension } = this;
       for (let window of ExtensionSupport.openWindows) {
         if ([
           "chrome://messenger/content/folderProps.xhtml",
         ].includes(window.location.href)) {
-          onUnload(window)
+          onUnload(window, extension)
         }
       }
 
-      ExtensionSupport.unregisterWindowListener(addonId);
+      ExtensionSupport.unregisterWindowListener(extension.id);
 
       // Flush all caches.
       Services.obs.notifyObservers(null, "startupcache-invalidate");
