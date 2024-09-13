@@ -25,7 +25,7 @@
 
   // Helper function to inject a legacy XUL string into the DOM of Thunderbird.
   // All injected elements will get the data attribute "data-extension-injected"
-  // set to the extensions id, for easy removal.
+  // set to the extension id, for easy removal.
   const injectElements = function (extension, window, xulString, debug = false) {
     function checkElements(stringOfIDs) {
       let arrayOfIDs = stringOfIDs.split(",").map((e) => e.trim());
