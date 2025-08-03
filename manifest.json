@@ -4,7 +4,7 @@
     "gecko": {
       "id": "{2bc419d0-6cf3-11da-8494-000a95be0946}",
       "strict_min_version": "128.0",
-      "strict_max_version": "130.*"
+      "strict_max_version": "140.*"
     }
   },
   "name": "__MSG_extensionName__",
