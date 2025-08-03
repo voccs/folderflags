@@ -2,12 +2,7 @@ all: dist
 
 dist:
 	rm -f folderflags.xpi
-	zip folderflags.xpi --exclude=chrome/Makefile.chrome -r manifest.json license.txt api chrome _locales
-
-folderflags.xpi:
-	make -f Makefile.chrome -C chrome folderflags.jar
-	rm -f $@
-	zip $@ chrome/folderflags.jar manifest.json license.txt chrome.manifest _locales/**/*
+	zip folderflags.xpi --exclude=chrome/Makefile.chrome -r manifest.json license.txt api icon32x32.png _locales
 
 babelzilla:
 	make -f Makefile.chrome -C chrome babelzilla
