@@ -4,11 +4,11 @@
     "gecko": {
       "id": "{2bc419d0-6cf3-11da-8494-000a95be0946}",
       "strict_min_version": "128.0",
-      "strict_max_version": "140.*"
+      "strict_max_version": "142.*"
     }
   },
   "name": "__MSG_extensionName__",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "__MSG_extensionDescription__",
   "author": "Ryan Lee (ryan@ryanlee.org)",
   "homepage_url": "http://ryanlee.org/software/mozilla/thunderbird/folderflags/",
